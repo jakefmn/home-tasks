@@ -1,0 +1,83 @@
+Server:
+
+
+
+
+
+jakefirstman@MacBook-Air-Jake ORIS_homeworks % python3 server.py
+
+Сервер запущен: 127.0.0.1:8000
+
+Клиент подключился: ('127.0.0.1', 55346)
+
+('127.0.0.1', 55346) теперь пользователь Jake
+
+Клиент подключился: ('127.0.0.1', 55375)
+
+('127.0.0.1', 55375) теперь пользователь Gleb
+
+Jake: Привет
+
+Gleb: Привет, Джейк
+
+Клиент отключён: ('127.0.0.1', 55346)
+
+Клиент штатно закрыл соединение: ('127.0.0.1', 55375)
+
+Клиент отключён: ('127.0.0.1', 55375)
+
+
+
+Client Jake:
+
+
+
+jakefirstman@MacBook-Air-Jake ORIS_homeworks % python3 client.py
+Введите имя: Jake
+Команды:
+/list - список пользователей
+/quit - выйти
+
+Вы вошли как Jake
+Любой другой текст отправляется как сообщение
+> 
+[system] Gleb подключился
+Привет
+> 
+Gleb: Привет, Джейк
+/list
+> 
+Пользователи:
+Gleb
+Jake
+/quit
+
+
+
+
+
+Client Gleb:
+
+
+
+jakefirstman@MacBook-Air-Jake ORIS_homeworks % python3 client.py
+Введите имя: Gleb
+
+Вы вошли как Gleb
+Команды:
+/list - список пользователей
+/quit - выйти
+Любой другой текст отправляется как сообщение
+> 
+Jake: Привет
+Привет, Джейк
+> 
+[system] Jake вышел
+^C
+Сервер закрыл соединение
+Traceback (most recent call last):
+  File "/Users/jakefirstman/Desktop/ORIS_homeworks/client.py", line 156, in <module>
+    main()
+  File "/Users/jakefirstman/Desktop/ORIS_homeworks/client.py", line 106, in main
+    text = input("> ")
+KeyboardInterrupt
